@@ -1,7 +1,7 @@
 # COMPSYS305-FlappyBird
 **Authors:**
 
-Project1-team08: Katherine Luo, William Zang and Lexin Lin
+Team08: Katherine Luo, William Zang and Lexin Lin
 
 **A Brief Introduction of our project:**
 
