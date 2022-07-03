@@ -1,0 +1,30 @@
+library IEEE;
+use IEEE.std_logic_1164.all;
+use IEEE.std_logic_unsigned.all;
+use IEEE.numeric_std.all;
+
+entity clock_generator is
+  port(Fifty_MHz_Clk : in std_logic;
+       One_Hz_Clk : out std_logic);
+end entity;
+
+architecture behaviour of clock_generator is
+begin
+  process(Fifty_MHz_Clk)
+    variable cntr : integer := 0;
+    variable temp_Clk : std_logic := '0';
+    begin
+      if(rising_edge(Fifty_MHz_Clk)) then
+        cntr := cntr + 1;
+        if(cntr = 1) then
+          cntr := 0;
+          if(temp_Clk = '0') then
+            temp_Clk := '1';
+          else
+            temp_Clk := '0';
+          end if;
+        end if;
+      end if;
+      One_Hz_Clk <= temp_Clk;
+  end process;
+end architecture behaviour;

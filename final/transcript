@@ -1,0 +1,39 @@
+# Reading E:/ModelSimAlteraStarter/modelsim_ase/tcl/vsim/pref.tcl 
+# OpenFile C:/Users/a7981/Downloads/Code2-20220528T040456Z-001/Code2/game_state.vhd 
+vcom -reportprogress 300 -work work C:/Users/a7981/Downloads/Code2-20220528T040456Z-001/Code2/game_state.vhd
+# Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Compiling entity game_state
+# ** Error: C:/Users/a7981/Downloads/Code2-20220528T040456Z-001/Code2/game_state.vhd(13): near ")": expecting FUNCTION or PROCEDURE or IMPURE or PURE
+vcom -reportprogress 300 -work work C:/Users/a7981/Downloads/Code2-20220528T040456Z-001/Code2/game_state.vhd
+# Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Compiling entity game_state
+# -- Compiling architecture behavior of game_FSM
+# ** Error: (vcom-11) Could not find work.game_fsm.
+# 
+# ** Error: C:/Users/a7981/Downloads/Code2-20220528T040456Z-001/Code2/game_state.vhd(16): VHDL Compiler exiting
+vcom -reportprogress 300 -work work C:/Users/a7981/Downloads/Code2-20220528T040456Z-001/Code2/game_state.vhd
+# Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Compiling entity game_state
+# -- Compiling architecture behavior of game_state
+# ** Error: C:/Users/a7981/Downloads/Code2-20220528T040456Z-001/Code2/game_state.vhd(17): (vcom-1294) Declaration with designator "dead" already exists in this region.
+# ** =====> Prior declaration of "dead" is at C:/Users/a7981/Downloads/Code2-20220528T040456Z-001/Code2/game_state.vhd(7).
+# 
+# ** Error: C:/Users/a7981/Downloads/Code2-20220528T040456Z-001/Code2/game_state.vhd(33): No feasible entries for infix operator "=".
+# ** Error: C:/Users/a7981/Downloads/Code2-20220528T040456Z-001/Code2/game_state.vhd(33): Type error resolving infix expression "=" as type std.STANDARD.BOOLEAN.
+# ** Error: C:/Users/a7981/Downloads/Code2-20220528T040456Z-001/Code2/game_state.vhd(76): VHDL Compiler exiting
+vcom -reportprogress 300 -work work C:/Users/a7981/Downloads/Code2-20220528T040456Z-001/Code2/game_state.vhd
+# Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Compiling entity game_state
+# -- Compiling architecture behavior of game_state

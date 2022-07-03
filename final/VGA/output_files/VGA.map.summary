@@ -1,0 +1,14 @@
+Analysis & Synthesis Status : Successful - Mon May 30 12:10:31 2022
+Quartus II 64-Bit Version : 13.0.0 Build 156 04/24/2013 SJ Full Version
+Revision Name : VGA
+Top-level Entity Name : flappydoge
+Family : Cyclone III
+Total logic elements : 2,162
+    Total combinational functions : 2,096
+    Dedicated logic registers : 301
+Total registers : 301
+Total pins : 53
+Total virtual pins : 0
+Total memory bits : 189,568
+Embedded Multiplier 9-bit elements : 0
+Total PLLs : 1

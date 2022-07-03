@@ -1,0 +1,16 @@
+<?xml version="1.0" ?>
+<LOG_ROOT>
+	<PROJECT NAME="VGA">
+		<CBX_INST_ENTRY INSTANCE_NAME="|flappydoge|altpll0:inst2|altpll:altpll_component" CBX_FILE_NAME="altpll0_altpll.v"/>
+		<CBX_INST_ENTRY INSTANCE_NAME="|flappydoge|background:inst|lpm_mult:Mult0|multcore:mult_core|mpar_add:padder|mpar_add:sub_par_add|lpm_add_sub:adder[0]" CBX_FILE_NAME="add_sub_7jh.tdf"/>
+		<CBX_INST_ENTRY INSTANCE_NAME="|flappydoge|char_display:inst11|lpm_mult:Mult1|multcore:mult_core|mpar_add:padder|lpm_add_sub:adder[0]" CBX_FILE_NAME="add_sub_98h.tdf"/>
+		<CBX_INST_ENTRY INSTANCE_NAME="|flappydoge|background_rom:inst5|altsyncram:altsyncram_component" CBX_FILE_NAME="altsyncram_cea1.tdf"/>
+		<CBX_INST_ENTRY INSTANCE_NAME="|flappydoge|char_display:inst11|lpm_mult:Mult0|multcore:mult_core|mpar_add:padder|lpm_add_sub:adder[0]" CBX_FILE_NAME="add_sub_bfh.tdf"/>
+		<CBX_INST_ENTRY INSTANCE_NAME="|flappydoge|char_rom:inst9|altsyncram:altsyncram_component" CBX_FILE_NAME="altsyncram_kt91.tdf"/>
+		<CBX_INST_ENTRY INSTANCE_NAME="|flappydoge|doge_rom:inst20|altsyncram:altsyncram_component" CBX_FILE_NAME="altsyncram_mn91.tdf"/>
+		<CBX_INST_ENTRY INSTANCE_NAME="|flappydoge|eve_background_rom:inst6|altsyncram:altsyncram_component" CBX_FILE_NAME="altsyncram_bra1.tdf"/>
+		<CBX_INST_ENTRY INSTANCE_NAME="|flappydoge|title_rom:inst7|altsyncram:altsyncram_component" CBX_FILE_NAME="altsyncram_du91.tdf"/>
+		<CBX_INST_ENTRY INSTANCE_NAME="|flappydoge|background:inst|lpm_mult:Mult0|multcore:mult_core|mpar_add:padder|lpm_add_sub:adder[0]" CBX_FILE_NAME="add_sub_98h.tdf"/>
+		<CBX_INST_ENTRY INSTANCE_NAME="|flappydoge|char_display:inst11|lpm_mult:Mult1|multcore:mult_core|mpar_add:padder|mpar_add:sub_par_add|lpm_add_sub:adder[0]" CBX_FILE_NAME="add_sub_7jh.tdf"/>
+	</PROJECT>
+</LOG_ROOT>

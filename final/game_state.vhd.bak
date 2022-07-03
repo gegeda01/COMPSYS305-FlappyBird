@@ -1,0 +1,76 @@
+library ieee;
+use ieee.std_logic_1164.all; 
+
+entity game_state is
+port(
+	clk        : in std_logic;
+	pb1, pb2, dead : in std_logic;
+	bt0, bt1, sw0				: in std_logic;
+	state_out         : out std_logic_vector(1 downto 0);
+	mode					: out std_logic;
+	pause					: out std_logic;
+	reset			  : out std_logic
+);
+end game_state;
+
+architecture behavior of game_state is 
+	type game_state is (menu, game, gg, paused); 
+	signal current_state : game_state := menu; 
+	
+begin   
+	process(clk)
+
+	begin
+		if (clk'event and clk = '1') then 
+		case current_state is 
+		    when menu =>  
+				if pb1 = '1' then
+			   	reset <= '1'; 
+					current_state <= game;
+				end if; 
+			when game =>  
+			  reset <= '0';
+				if dead = '1' then  
+					current_state <= gg; 
+				elsif bt0 = '0' then
+					pause <= '1';
+					current_state <= paused;
+				end if;
+			when dead => 
+				if(pb1 ='1')  then
+					reset <= '1';
+					current_state <= game;
+				elsif (pb2 = '1') then
+					current_state <= menu;
+				end if;
+			when paused => 
+				if bt1 ='0' then
+					pause <= '0';
+					current_state <= game;
+				end if;
+			end case; 
+		end if;
+	end process;
+
+	process(current_state,sw0)
+	begin 
+		case current_state is 
+			when menu =>  
+					
+					mode <= '0';
+					
+					if (sw0 = '1')then
+						mode <= '1';
+					end if;
+					
+					state_out <= "00";
+			when game =>  
+					state_out <= "01";
+			when dead => 
+					state_out <= "10";
+			when paused => 
+					state_out <= "11";
+			end case; 
+		end process;
+
+end behavior; 

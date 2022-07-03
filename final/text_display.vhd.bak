@@ -1,0 +1,59 @@
+LIBRARY ieee;
+USE ieee.std_logic_1164.all;
+USE IEEE.STD_LOGIC_ARITH.all;
+USE IEEE.STD_LOGIC_UNSIGNED.all;
+
+entity text_display is
+  port(pixel_row, pixel_column : in std_logic_vector(9 downto 0);
+       character_address : out std_logic_vector(5 downto 0);
+       font_row, font_column : out std_logic_vector(2 downto 0);
+       text_Enable_out : out std_logic_vector(5 downto 0));
+end entity text_display;
+
+architecture behaviour of text_display is
+  signal text_Enable : std_logic_vector(5 downto 0);
+begin
+  text_Enable_out <= text_Enable;
+  text_Enable <= CONV_STD_LOGIC_VECTOR(3,6) when(('0' & pixel_row >= '0' & CONV_STD_LOGIC_VECTOR(143,10)) and ('0' & pixel_row <= '0' & CONV_STD_LOGIC_VECTOR(159,10)) and   --C
+																	('0' & pixel_column >= '0' & CONV_STD_LOGIC_VECTOR(192,10)) and ('0' & pixel_column <= '0' & CONV_STD_LOGIC_VECTOR(207,10))) else
+																	
+					  CONV_STD_LOGIC_VECTOR(12,6) when(('0' & pixel_row >= '0' & CONV_STD_LOGIC_VECTOR(143,10)) and ('0' & pixel_row <= '0' & CONV_STD_LOGIC_VECTOR(159,10)) and   --L
+																	('0' & pixel_column >= '0' & CONV_STD_LOGIC_VECTOR(208,10)) and ('0' & pixel_column <= '0' & CONV_STD_LOGIC_VECTOR(223,10))) else
+																	
+					  CONV_STD_LOGIC_VECTOR(9,6) when(('0' & pixel_row >= '0' & CONV_STD_LOGIC_VECTOR(143,10)) and ('0' & pixel_row <= '0' & CONV_STD_LOGIC_VECTOR(159,10)) and   --I
+																	('0' & pixel_column >= '0' & CONV_STD_LOGIC_VECTOR(224,10)) and ('0' & pixel_column <= '0' & CONV_STD_LOGIC_VECTOR(239,10))) else
+																	
+					  CONV_STD_LOGIC_VECTOR(3,6) when(('0' & pixel_row >= '0' & CONV_STD_LOGIC_VECTOR(143,10)) and ('0' & pixel_row <= '0' & CONV_STD_LOGIC_VECTOR(159,10)) and   --C
+																	('0' & pixel_column >= '0' & CONV_STD_LOGIC_VECTOR(240,10)) and ('0' & pixel_column <= '0' & CONV_STD_LOGIC_VECTOR(255,10))) else
+																	
+					  CONV_STD_LOGIC_VECTOR(11,6) when(('0' & pixel_row >= '0' & CONV_STD_LOGIC_VECTOR(143,10)) and ('0' & pixel_row <= '0' & CONV_STD_LOGIC_VECTOR(159,10)) and   --K
+																	('0' & pixel_column >= '0' & CONV_STD_LOGIC_VECTOR(256,10)) and ('0' & pixel_column <= '0' & CONV_STD_LOGIC_VECTOR(271,10))) else
+																															         
+					  CONV_STD_LOGIC_VECTOR(20,6)	when(('0' & pixel_row >= '0' & CONV_STD_LOGIC_VECTOR(143,10)) and ('0' & pixel_row <= '0' & CONV_STD_LOGIC_VECTOR(159,10)) and   --T
+																	('0' & pixel_column >= '0' & CONV_STD_LOGIC_VECTOR(287,10)) and ('0' & pixel_column <= '0' & CONV_STD_LOGIC_VECTOR(302,10))) else
+																	
+					  CONV_STD_LOGIC_VECTOR(15,6)	when(('0' & pixel_row >= '0' & CONV_STD_LOGIC_VECTOR(143,10)) and ('0' & pixel_row <= '0' & CONV_STD_LOGIC_VECTOR(159,10)) and   --O
+																	('0' & pixel_column >= '0' & CONV_STD_LOGIC_VECTOR(303,10)) and ('0' & pixel_column <= '0' & CONV_STD_LOGIC_VECTOR(318,10))) else
+					  
+					  CONV_STD_LOGIC_VECTOR(19,6)	when(('0' & pixel_row >= '0' & CONV_STD_LOGIC_VECTOR(143,10)) and ('0' & pixel_row <= '0' & CONV_STD_LOGIC_VECTOR(159,10)) and   --S
+																	('0' & pixel_column >= '0' & CONV_STD_LOGIC_VECTOR(335,10)) and ('0' & pixel_column <= '0' & CONV_STD_LOGIC_VECTOR(350,10))) else
+					  
+					  CONV_STD_LOGIC_VECTOR(20,6)	when(('0' & pixel_row >= '0' & CONV_STD_LOGIC_VECTOR(143,10)) and ('0' & pixel_row <= '0' & CONV_STD_LOGIC_VECTOR(159,10)) and   --T
+																	('0' & pixel_column >= '0' & CONV_STD_LOGIC_VECTOR(351,10)) and ('0' & pixel_column <= '0' & CONV_STD_LOGIC_VECTOR(366,10))) else
+					  
+					  CONV_STD_LOGIC_VECTOR(1,6)	when(('0' & pixel_row >= '0' & CONV_STD_LOGIC_VECTOR(143,10)) and ('0' & pixel_row <= '0' & CONV_STD_LOGIC_VECTOR(159,10)) and   --A
+																	('0' & pixel_column >= '0' & CONV_STD_LOGIC_VECTOR(367,10)) and ('0' & pixel_column <= '0' & CONV_STD_LOGIC_VECTOR(382,10))) else
+					  
+					  CONV_STD_LOGIC_VECTOR(18,6)	when(('0' & pixel_row >= '0' & CONV_STD_LOGIC_VECTOR(143,10)) and ('0' & pixel_row <= '0' & CONV_STD_LOGIC_VECTOR(159,10)) and   --R
+																	('0' & pixel_column >= '0' & CONV_STD_LOGIC_VECTOR(383,10)) and ('0' & pixel_column <= '0' & CONV_STD_LOGIC_VECTOR(398,10))) else
+					  
+					  CONV_STD_LOGIC_VECTOR(20,6)	when(('0' & pixel_row >= '0' & CONV_STD_LOGIC_VECTOR(143,10)) and ('0' & pixel_row <= '0' & CONV_STD_LOGIC_VECTOR(159,10)) and   --T
+																	('0' & pixel_column >= '0' & CONV_STD_LOGIC_VECTOR(399,10)) and ('0' & pixel_column <= '0' & CONV_STD_LOGIC_VECTOR(414,10))) else
+					  
+																	
+																	CONV_STD_LOGIC_VECTOR(0,6);
+																	
+  character_address <= text_Enable when text_Enable > 0;
+  font_row <= pixel_row(3 downto 1);
+  font_column <= pixel_column(3 downto 1);
+end architecture behaviour;

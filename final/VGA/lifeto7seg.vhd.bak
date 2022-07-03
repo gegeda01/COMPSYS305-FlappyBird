@@ -1,0 +1,15 @@
+library IEEE;
+use IEEE.std_logic_1164.all;
+use IEEE.std_logic_unsigned.all;
+use IEEE.numeric_std.all;
+
+
+entity lifeto7seg is
+	prot(Clk : in std_logic;
+	     life : in std_logic_vector(3 downto 0)
+	     lifeout : out std_logic_vector(3 downto 0)
+	);
+end entity;
+
+architecture behaviour of lifeto7seg is
+begin
